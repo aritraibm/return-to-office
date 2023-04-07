@@ -1,0 +1,26 @@
+server:
+  port: 9001
+
+
+spring:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+       dialect = org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    url: jdbc:postgresql://localhost:5432/return-to-office
+    username: postgres
+    password: admin
+    driverClassName: org.postgresql.Driver
+  application:
+    name: RETURN-TO-OFFICE-SERVICE
+  config:
+        activate:
+            on-profile: dev
+    
+
+logging:
+  file.name: C:/Users/002TCO744/Desktop/elk-logs/rto-service.log
